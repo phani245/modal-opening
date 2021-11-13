@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono';
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+button {
+  background-color: #123456;
+  color: #ffffff;
+  padding:16px;
+  font-size: 24px;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#modal-container {
+  position: fixed;
+  top:0;
+  left:0;
+  background-color:rgba(0, 0, 0, 0.3);
+  height:100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  opacity:0;
+  pointer-events: none;
+}
+
+#modal-container.show{
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #fff;
+  width:600px;
+  max-width: 100%;
+  padding:30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+#content {
+  margin-bottom: 5px;
+}
+
+#close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    top: 15px;
+    font-size: 36px;
+    background-color: none;
+    width: 24px;
+    text-align: center;
+    cursor: pointer;
+}
